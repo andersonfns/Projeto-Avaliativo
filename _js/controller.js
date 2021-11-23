@@ -11,11 +11,11 @@ var Email = document.getElementById('Email').value;
 var Senha = document.getElementById('Senha').value;
 
 
-if (!Nome|| !DtNasc || !CPF || !Fone || !CEP || !Email || !Senha ){
+if (!Nome || !DtNasc || !CPF || !Fone || !CEP || !Email || !Senha){
 	alert("campos não preenchidos, por favor preenche-los");
 } else{
-	alert("campos preenchidos com sucesso")
-;}
+	alert("campos preenchidos com sucesso");
+}
 }
 
 /* final: função de verificação de campos do formulário */
@@ -25,16 +25,15 @@ if (!Nome|| !DtNasc || !CPF || !Fone || !CEP || !Email || !Senha ){
  	const isCelular = numeroAtual.length === 11;
  	const isFone = numeroAtual.length === 10;
  	let numeroAjustado;
- 	if (isCelular)
- }
-{ const part1 = numeroAtual.slice(0,2);
+ 	if (isCelular){
+	const part1 = numeroAtual.slice(0,2);
 	const part2 = numeroAtual.slice(2,7);
 	const part3 =numeroAtual.slice(7,11);
 	numeroAjustado = `(${part1}) ${part2}-${part3}`
-}
-else if(isFone)
+} else if(isFone){
 	const part1 = numeroAtual.slice(0,2);
 	const part2 = numeroAtual.slice(2,6);
 	const part3 =numeroAtual.slice(6,10);
 	numeroAjustado = `(${part1}) ${part2}-${part3}`
+}
 }
